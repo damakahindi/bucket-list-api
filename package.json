@@ -5,9 +5,12 @@
   "repository": "git@github.com:damakahindi/bucket-list-api.git",
   "author": "Esther Dama Kahindi <esther.kahindi@andela.com>",
   "license": "MIT",
+  "engines": {
+    "yarn": "0.27.5"
+  },
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
