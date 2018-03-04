@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 const user = require('./server/routes/user');
 const section = require('./server/routes/section');
+const bucket = require('./server/routes/bucket');
 
 const app = express();
 
@@ -15,10 +16,11 @@ app.use(bodyParser.json());
 
 const port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://dama:dama@ds153978.mlab.com:53978/bucket-list-dama');
+mongoose.connect(process.env.MONGODB_URI);
 
 app.use('/api', user);
 app.use('/api', section);
+app.use('/api', bucket);
 
 app.listen(port, () => {
   console.info('==> 🌎 Listening on port %s. Open up http://127.0.0.1:%s/ ', port, port);
