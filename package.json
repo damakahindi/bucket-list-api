@@ -1,0 +1,22 @@
+{
+  "name": "bucket-list-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:damakahindi/bucket-list-api.git",
+  "author": "Esther Dama Kahindi <esther.kahindi@andela.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "eslint": "^4.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.8"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  }
+}
