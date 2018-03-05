@@ -56,6 +56,7 @@ const SectionCtrl = {
     Section.find({ googleId: req.params.user_id })
       .sort('-createdAt')
       .exec((error, section) => {
+        console.log('Got here', section);
         if (error) {
           return res.status(500).send(error);
         }

@@ -7,6 +7,7 @@ const BucketSchema = new Schema({
   sectionId: { type: Schema.Types.ObjectId, ref: 'Section' },
   title: { type: String, required: true },
   description: { type: String },
+  isDone: { type: Boolean, default: false, required: true },
   url: { type: String },
 }, { timestamps: true });
 

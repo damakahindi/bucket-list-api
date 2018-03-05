@@ -10,12 +10,16 @@ const UserCtrl = {
     usr.googleId = req.body.googleId;
 
     usr.save((error, user) => {
+      console.log('Creating a User');
       if (error) {
         if (error.code === 11000) {
-          return res.status(200).send(error.getOperation());
+          user = error.getOperation();
+          user.doesExist = true;
+          return res.status(200).send(user);
         }
         return res.status(500).send(error);
       }
+      user.doesExist = false;
       return res.status(201).send(user);
     });
   },
