@@ -41,7 +41,7 @@ const SectionCtrl = {
       if (req.body.title) {
         section.title = req.body.title;
       }
-      if (req.body.content) {
+      if (req.body.description) {
         section.description = req.body.description;
       }
       section.save((err) => {
@@ -56,7 +56,6 @@ const SectionCtrl = {
     Section.find({ googleId: req.params.user_id })
       .sort('-createdAt')
       .exec((error, section) => {
-        console.log('Got here', section);
         if (error) {
           return res.status(500).send(error);
         }
