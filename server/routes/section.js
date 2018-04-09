@@ -11,7 +11,7 @@ router.route('/section/:id')
   .put(Section.update)
   .delete(Section.delete);
 
-router.route('/user/:user_id/sections')
+router.route('/user/:user_id/section')
   .get(Section.getByUser);
 
 module.exports = router;

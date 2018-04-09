@@ -10,7 +10,6 @@ const UserCtrl = {
     usr.googleId = req.body.googleId;
 
     usr.save((error, user) => {
-      console.log('Creating a User');
       if (error) {
         if (error.code === 11000) {
           user = error.getOperation();

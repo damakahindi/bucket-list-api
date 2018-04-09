@@ -47,7 +47,7 @@ const BucketCtrl = {
       if (req.body.title) {
         bucket.title = req.body.title;
       }
-      if (req.body.content) {
+      if (req.body.description) {
         bucket.description = req.body.description;
       }
       bucket.save((err) => {
