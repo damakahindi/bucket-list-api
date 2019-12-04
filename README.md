@@ -19,7 +19,7 @@ This is a  bucket-list API that allows users of the API to manages buckets, sess
 
 ## Tests
 
-Run `MONGODB_URI=mongodb://<user>:<user>@ds1234.mlab.com:1237/name-of-mlab-mongo-db npm test` on the terminal while within the **project root directory**.
+Run `MONGODB_URI=mongodb://<user>:<user>@<userURL>.mlab.com:1237/name-of-mlab-mongo-db npm test` on the terminal while within the **project root directory**.
 
 ## Usage
 ### Starting
